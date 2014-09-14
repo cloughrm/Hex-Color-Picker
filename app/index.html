@@ -8,15 +8,10 @@
 
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Hex Color Picker</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
-    <!-- build:css(.) styles/vendor.css -->
-    <!-- inject:bower:css -->
-    <!-- endinject -->
-    <!-- endbuild -->
 
     <!-- build:css(.) styles/main.css -->
     <!-- inject:css -->
@@ -30,9 +25,9 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div ui-view class="content"></div>
+    <div ng-include src="'angular/home/home.html'"></div>
     <div class="footer">
-        <img class="sq" src="/images/sq.png">
+        <img class="sq" src="images/sq.png">
         A product of <a href="https://twitter.com/cloughrm">Ryan Clough</a>
     </div>
 

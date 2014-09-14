@@ -44,3 +44,6 @@ Run:
     gulp clean
 ```
 to remove the `.tmp/` and `dist/` folders generated during the build process.
+
+---
+Thanks to [Alex Wendland](https://github.com/awendland) for setting up the project template!

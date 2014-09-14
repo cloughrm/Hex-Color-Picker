@@ -9,7 +9,6 @@ $.mainBowerFiles = require('main-bower-files');
 gulp.task('dev:styles', function () {
     return gulp.src([
             'app/styles/overseer.less',
-            'app/styles/libs/**/*.less',
             'app/styles/app/**/*.less'
         ])
         .pipe($.plumber())
@@ -28,10 +27,9 @@ gulp.task('dev:scripts', function () {
 });
 
 function injectHtml(isDev) {
-    var bowerFilesJqueryFirst = $.mainBowerFiles({filter: /jquery\.js/}).concat($.mainBowerFiles());
     return gulp.src('app/index.html')
         .pipe(
-            $.inject(gulp.src(bowerFilesJqueryFirst, {
+            $.inject(gulp.src($.mainBowerFiles(), {
                 read: false
             }), {
                 starttag: '<!-- inject:bower:{{ext}} -->',
@@ -82,7 +80,7 @@ gulp.task('build:ngviews', function () {
             quotes: true
         }))
         .pipe($.ngHtml2js({
-            moduleName: 'interfaceApp',
+            moduleName: 'hexApp',
             prefix: 'angular/'
         }))
         .pipe($.concat('ngviews.min.js'))

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('hexApp')
-    .controller('HomeCtrl', function ($scope, $state) {
+    .controller('HomeCtrl', function ($scope) {
 
         function componentToHex(c) {
             var hex = c.toString(16);

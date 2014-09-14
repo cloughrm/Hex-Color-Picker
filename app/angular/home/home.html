@@ -1,14 +1,18 @@
-<div class="slider-wrapper">
-    <div class="color-box" ng-repeat="c in colors" ng-mouseover="setBG(c)" style="background-color: rgb({{c.rgb.r}}, {{c.rgb.g}}, {{c.rgb.b}});">&nbsp;</div>
-</div>
+<div ng-controller="HomeCtrl">
 
-<div class="current-color">
-    <p>Hex: {{current.hex}}</p>
-    <p>HSV: {{current.hsv.h}}, {{current.hsv.s}}, {{current.hsv.v}}</p>
-    <p>RGB: {{current.rgb.r}}, {{current.rgb.b}}, {{current.rgb.b}}</p>
-</div>
+    <div class="slider-wrapper">
+        <div class="color-box" ng-repeat="c in colors" ng-mouseover="setBG(c)" style="background-color: rgb({{c.rgb.r}}, {{c.rgb.g}}, {{c.rgb.b}});">&nbsp;</div>
+    </div>
 
-<div class="s slider-wrapper">
-    <div class="color-box" ng-repeat="val in s" ng-mouseover="setS(val)" style="background-color: rgb({{val.rgb.r}}, {{val.rgb.g}}, {{val.rgb.b}});">&nbsp;</div>
-    <div class="color-box" ng-repeat="val in v | reverse" ng-mouseover="setV(val)" style="background-color: rgb({{val.rgb.r}}, {{val.rgb.g}}, {{val.rgb.b}});">&nbsp;</div>
+    <div class="current-color">
+        <p>Hex: {{current.hex}}</p>
+        <p>HSV: {{current.hsv.h}}, {{current.hsv.s}}, {{current.hsv.v}}</p>
+        <p>RGB: {{current.rgb.r}}, {{current.rgb.b}}, {{current.rgb.b}}</p>
+    </div>
+
+    <div class="s slider-wrapper">
+        <div class="color-box" ng-repeat="val in s" ng-mouseover="setS(val)" style="background-color: rgb({{val.rgb.r}}, {{val.rgb.g}}, {{val.rgb.b}});">&nbsp;</div>
+        <div class="color-box" ng-repeat="val in v | reverse" ng-mouseover="setV(val)" style="background-color: rgb({{val.rgb.r}}, {{val.rgb.g}}, {{val.rgb.b}});">&nbsp;</div>
+    </div>
+
 </div>
